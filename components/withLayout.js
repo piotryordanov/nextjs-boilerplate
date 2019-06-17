@@ -3,32 +3,15 @@ import { Flex } from "rebass";
 import { connect } from "react-redux";
 import GoogleFontLoader from "react-google-font-loader";
 import { createGlobalStyle } from "styled-components";
+import { GlobalStyle } from "./styles";
+import { Fonts } from "./Fonts";
 
 import Header from "./Header";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0px;
-  font-family: "Titillium Web", sans-serif;
-  }
-`;
 
 const withLayout = Page => {
   return props => (
     <div>
-      <GoogleFontLoader
-        fonts={[
-          {
-            font: "Roboto",
-            weights: [400, "400i"]
-          },
-          {
-            font: "Titillium Web",
-            weights: [300, 400, 700]
-          }
-        ]}
-        subsets={["cyrillic-ext", "greek"]}
-      />
+      <Fonts />
       <GlobalStyle />
       <Header />
       <Page {...props} />
