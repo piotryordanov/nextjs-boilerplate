@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "xo",
+    "test": "xo --fix",
     "docker": "sudo docker-compose down; sudo docker-compose up --build"
   },
   "repository": {
@@ -42,7 +42,8 @@
     "eslint-config-xo": "^0.26.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "xo": "^0.24.0"
+    "xo": "^0.24.0",
+    "husky": "^2.4.1"
   },
   "babel": {
     "presets": [
@@ -67,6 +68,11 @@
       "react/jsx-uses-vars": 2,
       "react/jsx-tag-spacing": 0,
       "react/react-in-jsx-scope": 2
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
     }
   }
 }

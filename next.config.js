@@ -1,5 +1,5 @@
-// next.config.js
+// Next.config.js
 
 module.exports = {
-  target: "serverless"
-};
+	target: 'serverless'
+}
