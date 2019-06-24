@@ -58,11 +58,14 @@
     ]
   },
   "xo": {
+    "prettier": true,
+    "semicolon": false,
     "extends": "xo-react",
     "rules": {
       "unicorn/filename-case": 0,
       "react/jsx-uses-react": 2,
       "react/jsx-uses-vars": 2,
+      "react/jsx-tag-spacing": 0,
       "react/react-in-jsx-scope": 2
     }
   }
