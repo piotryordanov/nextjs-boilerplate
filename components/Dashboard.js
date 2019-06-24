@@ -12,7 +12,7 @@ Index.propTypes = {
 	title: PropTypes.string
 }
 Index.defaultProps = {
-	title: ''
+	title: 'Hello World'
 }
 
 export default Index
