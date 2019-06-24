@@ -1,13 +1,12 @@
-import React from "react";
-import { connect } from "react-redux";
-import withLayout from "../components/withLayout";
+import React from 'react';
 
-import Dashboard from "../components/Dashboard";
+import {useDispatch, useSelector} from 'redux';
+import Dashboard from '../components/Dashboard';
 
-const Index = props => <Dashboard {...props} />;
+const Index = props => {
+  const dispatch = useDispatch();
+  const state = useSelector(state => state);
+  return <Dashboard {...props}/>;
+};
 
-function mapStateToProps(state) {
-  return { title: state.UI.title };
-}
-
-export default connect(mapStateToProps)(Index);
+export default Index;

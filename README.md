@@ -21,3 +21,6 @@ In order to deploy the app, type in: `now`
 
 # Todo
 - Add automatic deployment to server using `pm2`.
+
+
+Potential inspiration: https://github.com/react-boilerplate/react-boilerplate/blob/master/README.md
