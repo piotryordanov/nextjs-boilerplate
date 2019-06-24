@@ -20,11 +20,27 @@ npm install -g xo
 pacman -S prettier
 ```
 
+## Pre-commit-hook
+We use [husky](https://github.com/typicode/husky) to force run `npm test` before every commit. This will run `xo --fix`, and if it returns errors, it will forbig the commit to happen.
+The precommit-hook is setup inside the `package.json`. Here's how you can replace this behavior with a pre-push-hook:
+
+```json
+  // package.json
+  "husky": {
+    "hooks": {
+      - "pre-commit": "npm test"
+      + "pre-push": "npm test"
+    }
+  }
+```
+
+
+
 ## Vim setup
 You can use [Ale](https://github.com/w0rp/ale) to have both linting and fixing in vim/neovim. It will be based on xo and Prettier.
 Add the following to your vimrc:
 
-```
+```viml
 " Auto Formatting
 Plug 'Chiel92/vim-autoformat'
 Plug 'xojs/vim-xo'
@@ -51,7 +67,7 @@ Plug 'prettier/vim-prettier', {
 
 Then somewhere else, add these settings to enable the linting/fixing:
 
-```
+```viml
 let b:ale_fixers = {'javascript': ['xo'], "json": ['prettier']}
 let b:ale_linters = {'javascript': ['xo']}
 let g:ale_linters_explicit = 1
