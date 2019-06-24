@@ -13,7 +13,12 @@ This is an opiniated frontend boilerplate built on top of nextJS. The key stack 
 ----
 
 # Linting
-This project provides linting using [xo](https://github.com/xojs/xo) to lint, and a mix of [Prettier](https://prettier.io/) with xo for fixing.
+This project provides linting using [xo](https://github.com/xojs/xo) to lint, and a mix of [Prettier](https://prettier.io/) with xo for fixing. You might need to install them both on your system:
+
+```
+npm install -g xo
+pacman -S prettier
+```
 
 ## Vim setup
 You can use [Ale](https://github.com/w0rp/ale) to have both linting and fixing in vim/neovim. It will be based on xo and Prettier.
