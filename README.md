@@ -29,8 +29,8 @@ The precommit-hook is setup inside the `package.json`. Here's how you can replac
 {
   "husky": {
     "hooks": {
-      - "pre-commit": "npm test"
-      + "pre-push": "npm test"
+-      "pre-commit": "npm test"
++      "pre-push": "npm test"
     }
   }
 }
