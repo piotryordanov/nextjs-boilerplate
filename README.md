@@ -25,13 +25,15 @@ We use [husky](https://github.com/typicode/husky) to force run `npm test` before
 The precommit-hook is setup inside the `package.json`. Here's how you can replace this behavior with a pre-push-hook:
 
 ```Diff
-  // package.json
+// package.json
+{
   "husky": {
     "hooks": {
       - "pre-commit": "npm test"
       + "pre-push": "npm test"
     }
   }
+}
 ```
 
 
