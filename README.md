@@ -24,7 +24,7 @@ pacman -S prettier
 We use [husky](https://github.com/typicode/husky) to force run `npm test` before every commit. This will run `xo --fix`, and if it returns errors, it will forbig the commit to happen.
 The precommit-hook is setup inside the `package.json`. Here's how you can replace this behavior with a pre-push-hook:
 
-```diff
+```Diff
   // package.json
   "husky": {
     "hooks": {
